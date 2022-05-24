@@ -33,7 +33,7 @@ def run_eda() :
     # 별점이 4인 데이터만 가져와서, 별점과 리뷰내용만 보여준다.
     star_menu = sorted(df['stars'].unique())
     selected = st.selectbox('별점 선택', star_menu)
-    if selected is not NULL :
+    if selected :
         st.dataframe(df.loc[df['stars']==selected, 
                                         ['stars','text']])
 
