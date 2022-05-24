@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 import streamlit as st
 
 from app_eda import run_eda
@@ -20,7 +21,7 @@ def message_cleaning(sentence) :
   Test_punc_removed_join_clean = [word for word in Test_punc_removed_join.split() if word.lower() not in my_stopwords]
   # 4. 결과로 남은 단어들만 리턴한다.
   return Test_punc_removed_join_clean
-  
+
 def main() :
 
     st.title('리뷰 긍정 부정 예측 앱')
